@@ -1,9 +1,4 @@
-"""
-Aegis-MM Quantization Tradeoff Benchmarking Engine
-Evaluates full precision (FP32), 8-bit (INT8), and 4-bit (INT4) models on synthetic streams
-to generate comprehensive memory, accuracy fidelity, and speed tradeoff tables.
-"""
-import time
+
 import copy
 import torch
 from typing import Dict, Any, List

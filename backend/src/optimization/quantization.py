@@ -1,8 +1,4 @@
-"""
-Aegis-MM Weight Quantization Engine
-Simulates 8-bit (INT8) and 4-bit (INT4/NF4) symmetric linear quantization
-to evaluate production memory compression vs. inference fidelity tradeoffs.
-"""
+
 import torch
 import torch.nn as nn
 from typing import Tuple, Dict, Any
