@@ -7,7 +7,7 @@ import torch
 import torch.nn as nn
 from src.optimization.quantization import quantize_tensor_int8, quantize_tensor_int4, QuantizedLinearWrapper, apply_quantization_to_model
 from src.optimization.bench_tradeoff import run_tradeoff_benchmark
-
+import time
 
 def test_int8_quantization_precision():
     x = torch.randn(10, 10)

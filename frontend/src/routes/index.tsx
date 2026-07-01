@@ -262,20 +262,19 @@ function Header({
     <header className="h-14 border-b border-border/70 flex items-center px-4 gap-4 sticky top-0 z-40 backdrop-blur bg-background/70">
       <div className="flex items-center gap-2">
         <div
-          className="w-7 h-7 rounded-md bg-gradient-to-br from-cyan to-magenta grid place-items-center"
+          className="w-7 h-7 rounded-md bg-linear-to-br from-cyan to-magenta grid place-items-center"
           style={{ background: "linear-gradient(135deg, var(--color-cyan), var(--color-magenta))" }}
         >
           <Shield className="w-4 h-4 text-background" />
         </div>
         <div className="leading-tight">
           <p className="text-sm font-semibold">Aegis-MM</p>
-          <p className="text-[10px] font-mono text-muted-foreground">multimodal.guardrail.v1</p>
         </div>
       </div>
 
       <div className="ml-6 flex items-center gap-2 px-3 h-8 rounded-full glass">
         <span
-          className={`w-2 h-2 rounded-full pulse-dot ${wsConnected ? "bg-[color:var(--color-lime)]" : "bg-destructive"}`}
+          className={`w-2 h-2 rounded-full pulse-dot ${wsConnected ? "bg-(--color-lime)" : "bg-destructive"}`}
         />
         <span className="text-[11px] font-mono">
           {wsConnected ? "ws://localhost:8000/ws/stream · CONNECTED" : "DISCONNECTED"}
@@ -347,11 +346,9 @@ function Sidebar({
                 }`}
               >
                 {active && (
-                  <span className="absolute left-0 top-1.5 bottom-1.5 w-0.5 rounded-r bg-[color:var(--color-cyan)]" />
+                  <span className="absolute left-0 top-1.5 bottom-1.5 w-0.5 rounded-r bg-(--color-cyan)" />
                 )}
-                <Icon
-                  className={`w-4 h-4 shrink-0 ${active ? "text-[color:var(--color-cyan)]" : ""}`}
-                />
+                <Icon className={`w-4 h-4 shrink-0 ${active ? "text-(--color-cyan)" : ""}`} />
                 {!collapsed && (
                   <span className="flex-1 min-w-0">
                     <span className="block text-sm truncate">{n.label}</span>
@@ -423,7 +420,7 @@ function ControlRoom({
         subtitle="Live 30 FPS · head pose · gaze vector · landmarks"
         tag="HUD"
       >
-        <div className="relative aspect-video rounded-lg overflow-hidden bg-gradient-to-br from-[color:var(--color-surface-2)] to-background border border-border scan-line">
+        <div className="relative aspect-video rounded-lg overflow-hidden bg-linear-to-br from-(--color-surface-2) to-background border border-border scan-line">
           {/* Simulated silhouette */}
           <svg viewBox="0 0 640 360" className="absolute inset-0 w-full h-full">
             <defs>
@@ -505,7 +502,7 @@ function ControlRoom({
                   onClick={() => setAnomaly(i.id)}
                   className={`flex items-center gap-2 px-3 h-10 rounded-lg border transition-all text-xs font-medium ${
                     active
-                      ? "border-[color:var(--color-cyan)] bg-secondary glow-cyan"
+                      ? "border-(--color-cyan) bg-secondary glow-cyan"
                       : "border-border glass hover:border-muted-foreground"
                   }`}
                 >
@@ -618,7 +615,7 @@ function VisionView({ buf }: { buf: Packet[] }) {
         tag="VISION"
       >
         <div className="grid grid-cols-2 gap-3">
-          <div className="aspect-square rounded-lg bg-[color:var(--color-surface-2)] border border-border grid place-items-center">
+          <div className="aspect-square rounded-lg bg-(--color-surface-2) border border-border grid place-items-center">
             <Eye className="w-12 h-12 text-muted-foreground" />
           </div>
           <div className="aspect-square rounded-lg border border-border relative overflow-hidden">
@@ -1180,12 +1177,12 @@ function BenchView() {
               onClick={() => setSessions(s as 1 | 4 | 8 | 16)}
               className={`h-16 rounded-lg border transition-all font-mono ${
                 sessions === s
-                  ? "border-[color:var(--color-cyan)] bg-secondary glow-cyan"
+                  ? "border-(--color-cyan) bg-secondary glow-cyan"
                   : "border-border glass hover:border-muted-foreground"
               }`}
             >
               <span className="block text-xs text-muted-foreground">sessions</span>
-              <span className="text-lg text-[color:var(--color-cyan)]">{s}</span>
+              <span className="text-lg text-(--color-cyan)">{s}</span>
             </button>
           ))}
         </div>
