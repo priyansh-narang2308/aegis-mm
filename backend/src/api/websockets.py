@@ -1,8 +1,4 @@
-"""
-Aegis-MM Real-Time WebSocket Streaming Router
-Handles low-latency bidirectional WebSocket communication for continuous
-30 FPS interview stream proctoring and real-time frontend dashboard updates.
-"""
+
 import json
 import asyncio
 from fastapi import APIRouter, WebSocket, WebSocketDisconnect

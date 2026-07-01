@@ -1,8 +1,4 @@
-"""
-Aegis-MM High-Concurrency Load Tester
-Simulates N simultaneous real-time candidate video/audio streams under concurrent
-async pressure to compute precise p50, p95, and p99 SLA percentiles.
-"""
+
 import time
 import asyncio
 import numpy as np

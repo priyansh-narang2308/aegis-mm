@@ -1,8 +1,4 @@
-"""
-Aegis-MM Audio Spectral Feature Extractor
-Converts raw 16kHz audio waveform chunks into log-Mel spectrograms and extracts
-temporal-spectral feature maps using Depthwise Separable 1D/2D Convolutions.
-"""
+
 import torch
 import torch.nn as nn
 import torchaudio.transforms as T

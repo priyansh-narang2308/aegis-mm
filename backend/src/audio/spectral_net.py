@@ -1,8 +1,4 @@
-"""
-Aegis-MM Spectral Audio Anomaly Pipeline
-Processes raw audio chunks to compute acoustic feature embeddings, detect
-synthetic voice cloning (TTS deepfakes), and identify acoustic fraud anomalies.
-"""
+
 import torch
 import torch.nn as nn
 from typing import Dict, Union

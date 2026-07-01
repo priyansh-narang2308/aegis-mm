@@ -1,8 +1,4 @@
-"""
-Aegis-MM Core Configuration Settings
-Defines production hyper-parameters, streaming ring-buffer capacities,
-quantization flags, and multimodal architecture dimensions.
-"""
+
 import os
 from dataclasses import dataclass, field
 from typing import Dict, Any

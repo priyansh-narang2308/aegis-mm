@@ -1,8 +1,4 @@
-"""
-Aegis-MM REST API Routes
-Exposes system health monitoring, synchronous single-frame evaluation,
-and production latency telemetry metrics.
-"""
+
 from fastapi import APIRouter, HTTPException
 from .schemas import HealthResponse, FrameAnalysisRequest, TelemetryResponse, MetricsSummaryResponse
 from src.engine.stream_pipeline import AsyncStreamPipeline
@@ -11,7 +7,6 @@ from src.core.telemetry import global_tracer
 
 router = APIRouter()
 
-# Global pipeline instance shared across REST and WebSocket routers
 pipeline = AsyncStreamPipeline()
 
 generator = SyntheticStreamGenerator()

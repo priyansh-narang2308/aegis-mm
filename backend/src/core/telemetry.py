@@ -1,8 +1,4 @@
-"""
-Aegis-MM Telemetry & Latency Tracer
-Tracks sub-millisecond stage-by-stage inference latencies and computes
-real-time p50, p95, and p99 metrics for production benchmarking.
-"""
+
 import time
 import logging
 import numpy as np

@@ -1,8 +1,4 @@
-"""
-Aegis-MM Master FastAPI Application Server
-Entrypoint combining REST routers, WebSocket streaming endpoints, and CORS
-middleware for Next.js interactive frontend dashboard integration.
-"""
+
 from contextlib import asynccontextmanager
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware

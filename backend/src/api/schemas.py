@@ -1,7 +1,4 @@
-"""
-Aegis-MM API Pydantic Schemas
-Strict data validation models for REST endpoints and WebSocket stream payloads.
-"""
+
 from pydantic import BaseModel, Field
 from typing import Dict, Any, Optional
 

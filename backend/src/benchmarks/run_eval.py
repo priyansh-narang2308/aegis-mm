@@ -1,7 +1,4 @@
-"""
-Aegis-MM Automated Evaluation Harness
-Runs multi-concurrency stress benchmarks and generates comprehensive SLA reports.
-"""
+
 import asyncio
 from typing import Dict, Any, List
 from src.benchmarks.load_tester import run_concurrency_load_test
